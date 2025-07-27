@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .header {
+      background-color: #1c1813;
+      color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-title {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .header-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .cart-button,
+    .menu-button {
+      font-size: 24px;
+      background-color: transparent;
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: 10px 15px;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+    }
+
+    .cart-button:hover,
+    .menu-button:hover {
+      background-color: lightgray;
+    }
+
+    .section1 {
+      background-color: white;
+      padding: 50px;
+    }
+
+    .section2 {
+      background-color: #1c1813;
+      padding: 50px;
+      color: white;
+    }
+
+    .footer {
+      background-color: white;
+      color: black;
+      text-align: center;
+      min-height: 400px;
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+
+    .best-summer {
+      text-align: center;
+      font-family: 'Cooper Black', serif;
+      font-weight: bold;
+      margin: 0;
+      font-size: 24px; /* ← תואם את .idkn */
+      margin-top: -50px;
+    }
+
+    .mens-outlets,
+    .about-us {
+      margin-left: 0px;
+    }
+
+    .best-things {
+      margin-left: 400px;
+      margin-bottom: 10px;
+      margin-top: -200px;
+    }
+
+    .best-things1 {
+      margin-left: 400px;
+    }
+
+    .idkn {
+      text-align: center;
+      font-family: 'Cooper Black', serif;
+      font-weight: bold;
+      margin-bottom: 40px;
+      font-size: 24px;
+    }
+
+    .products-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .product-card {
+      background-color: white;
+      color: black;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      width: 300px;
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .product-card p {
+      margin: 10px 0;
+    }
+
+    .product-card button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      background-color: white;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .product-card button:hover {
+      background-color: lightblue;
+    }
+    .best-summer1 {
+      background-color: black;
+      color: white;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      width: 300px;
+      margin-inline-start: 200px;
+      margin-top: 25px;
+    }
+
+    .best-summer1 img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .best-summer1 p {
+      margin: 10px 0;
+    }
+
+    .best-summer1 button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      background-color: white;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .best-summer1 button:hover {
+      background-color: lightblue;
+    }
+    .best-summer2 {
+      background-color: black;
+      color: white;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      width: 300px;
+      margin-inline-start: 200px;
+      margin-top: 25px;
+    }
+
+    .best-summer2 img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .best-summer2 p {
+      margin: 10px 0;
+    }
+
+    .best-summer2 button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      background-color: white;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .best-summer2 button:hover {
+      background-color: lightblue;
+    }
+       .best-summer3 {
+      background-color: black;
+      color: white;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      width: 300px;
+      margin-inline-start: 200px;
+      margin-top: 25px;
+    }
+
+    .best-summer3 img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .best-summer3 p {
+      margin: 10px 0;
+    }
+
+    .best-summer3 button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      background-color: white;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .best-summer3 button:hover {
+      background-color: lightblue;
+    }
+        .best-summer4 {
+      background-color: black;
+      color: white;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      width: 300px;
+      margin-inline-start: 200px;
+      margin-top: 25px;
+    }
+
+    .best-summer4 img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .best-summer4 p {
+      margin: 10px 0;
+    }
+
+    .best-summer4 button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      background-color: white;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .best-summer4 button:hover {
+      background-color: lightblue;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="logo-title">
+      LATINOS<br>Outlet
+    </div>
+    <div class="header-buttons">
+      <button class="cart-button" onclick="window.location.href='cart.html'">🛒</button>
+      <button class="menu-button" onclick="window.location.href='latinos-menu.html'">☰</button>
+    </div>
+  </div>
+
+  <div class="section1">
+    <h2 class="mens-outlets">mens streetwear outlet</h2>
+    <h2 class="about-us">עלינו</h2>
+    <p>
+      <br>משלוח חינם מעל 399₪ לכל הארץ
+      <br>איכות ללא פשרות
+      <br>מחירים נוחים ומבצעים משתלמים
+      <br>משלוחים מהירים לכל הארץ
+    </p>
+    <h2 class="best-things">קטגוריות מובילות</h2>
+    <p class="best-things1">
+      <br>ג'ינסים
+      <br>ג'קטים
+      <br>חולצות
+      <br>חליפות
+    </p>
+  </div>
+
+  <div class="section2">
+    <h2 class="idkn">DONT MISS OUR<br>BEST OUTLETS</h2>
+
+    <div class="products-container">
+      <div class="product-card">
+        <img src="IMG_7458-scaled-e1750401751170-300x300.jpg" alt="לבנה osher חליפת">
+        <p>לבנה osher חליפת</p>
+        <p>200.00 ₪</p>
+        <button onclick="window.location.href='latinos-white-osher-suit.html'">בחר אפשרויות</button>
+      </div>
+
+      <div class="product-card">
+        <img src="IMG_E7400-scaled-e1750424957264-300x300.jpg" alt="סגולה osher חליפת">
+        <p>סגולה osher חליפת</p>
+        <p>200.00 ₪</p>
+        <button onclick="window.location.href='latinos-purple-osher-suit.html'">בחר אפשרויות</button>
+      </div>
+
+      <div class="product-card">
+        <img src="IMG_7125-scaled-e1749928248363-300x300.jpg" alt="סגלגל ZAG שורט">
+        <p>סגלגל ZAG שורט</p>
+        <p>149.99 ₪</p>
+        <button onclick="window.location.href='latinos-pants-zag.html'">בחר אפשרויות</button>
+      </div>
+
+      <div class="product-card">
+        <img src="IMG_7138-scaled-e1749926681751-300x300.jpg" alt="ורוד CUB שורט">
+        <p>ורוד CUB שורט</p>
+        <p>149.00 ₪</p>
+        <button onclick="window.location.href='latinos-pants-cub.html'">בחר אפשרויות</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <h2 class="best-summer">BEST SUMMER OUTLETS</h2>
+    <div class="best-summer1">
+    <img src="IMG_8442-scaled-e1752073197330-300x300.jpg">
+    <p>ורודה LTS טישרט</p>
+    <p>159.00 ₪</p>
+    <button onclick="window.location.href='latinos-shirt-lts.html'">בחר אפשרויות</button>
+    </div>
+    <div class="best-summer2">
+    <img src="IMG_7217-scaled-e1749919572873-300x300.jpg">
+    <p>תכלת CUB שורט</p>
+    <p>149.00 ₪</p>
+    <button onclick="window.location.href='latinos-pants-cub1.html'">בחר אפשרויות</button>
+    </div>
+    <div class="best-summer3">
+    <img src="IMG_3497-scaled-e1746119666656-300x300.jpg">
+    <p>שורט כוכב</p>
+    <p>249.00 ₪</p>
+    <button onclick="window.location.href='latinos-pants-star.html'">בחר אפשרויות</button>
+    </div>
+    <div class="best-summer4">
+    <img src="IMG_3552-300x300.jpg">
+    <p>טישרט 1978 בז</p>
+    <p>159.00 ₪</p>
+    <button onclick="window.location.href='latinos-shirt-1978.html'">בחר אפשרויות</button>
+    </div>
+    <p>אחרי שאתם מזמינים לא תוכלו ישר לחזור לאתר אבל אל תדאגו כי הזמנתכם נשלחה אלינו ונפנה אליכם בהקדם  &#128512;</p>
+  </div>
+
+</body>
+</html>

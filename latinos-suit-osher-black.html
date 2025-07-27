@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <title>מוצר - חליפת סגולה חדשה</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+    }
+
+    .back {
+      background-color: black;
+      color: white;
+      border: none;
+      padding: 9px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+
+    .img {
+      margin-left: 100px;
+    }
+
+    .add-to-cart {
+      display: block;
+      margin-left: 100px;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: orange;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .add-to-cart:hover {
+      background-color: darkorange;
+    }
+
+    .added-product {
+      margin-left: 100px;
+      margin-top: 30px;
+      border: 1px solid #ccc;
+      padding: 15px;
+      width: 500px;
+      border-radius: 10px;
+    }
+
+    .added-product img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .added-product h3,
+    .added-product p {
+      margin: 10px 0;
+    }
+
+    .size-select {
+      margin-left: 100px;
+      padding: 8px;
+      border-radius: 5px;
+      margin-top: 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="back" onclick="window.location.href='latinos-suits.html'">BACK</button>
+
+  <img src="IMG_E7541-scaled-e1750401402744-300x300.jpg" height="500" width="500" alt="Product image" class="img">
+
+  <!-- תפריט מידה -->
+  <label for="size" style="margin-left: 100px; display: block; margin-top: 20px;">בחר מידה:</label>
+  <select id="size" class="size-select">
+    <option value="XS">XS</option>
+    <option value="S">S</option>
+    <option value="M">M</option>
+    <option value="L">L</option>
+    <option value="XL">XL</option>
+    <option value="XXL">XXL</option>
+  </select>
+
+  <button class="add-to-cart" onclick="addToCart()">הוסף לעגלה</button>
+
+  <div id="product-display"></div>
+
+  <script>
+    function addToCart() {
+      const selectedSize = document.getElementById("size").value;
+
+      const product = {
+        name: "חליפה שחורה חדשה osher",
+        price: "200.00 ₪",
+        image: "IMG_E7541-scaled-e1750401402744-300x300.jpg",
+        size: selectedSize
+      };
+
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.push(product);
+      localStorage.setItem("cart", JSON.stringify(cart));
+
+      const display = document.getElementById("product-display");
+      display.innerHTML = `
+        <div class="added-product">
+          <img src="${product.image}" alt="${product.name}">
+          <h3>${product.name}</h3>
+          <p>מידה: ${product.size}</p>
+          <p>${product.price}</p>
+          <p>✔️ נוסף לעגלה בהצלחה!</p>
+        </div>
+      `;
+    }
+  </script>
+
+  <p>חליפת שחורה חדשה osher</p>
+  <p>200.00 ₪</p>
+
+</body>
+</html>
